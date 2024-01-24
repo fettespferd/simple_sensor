@@ -11,7 +11,7 @@ file](https://flutter.io/platform-plugins/).
 
 ```yaml
 dependencies:
-  simple_sensor: ^0.1.0
+  simple_sensor: ^0.1.3
 ```
 
 Import to your project.
@@ -19,12 +19,46 @@ Import to your project.
 ``` dart
 import 'package:simple_sensor/simple_sensor.dart';
 
-motionSensors.magnetometer.listen((MagnetometerEvent event) {
-    print(event);
+## Sensor Events
+
+This package provides access to various sensor events. Here's how you can use them:
+
+### Accelerometer
+
+The accelerometer measures the acceleration that the device is experiencing relative to freefall.
+
+```dart
+motionSensors.accelerometer.listen((AccelerometerEvent event) {
+    print('X: ${event.x}');
+    print('Y: ${event.y}');
+    print('Z: ${event.z}');
 });
 
+Gyroscope
+The gyroscope measures the rate or rotation in rad/s around each of the three axes.
+
+motionSensors.gyroscope.listen((GyroscopeEvent event) {
+    print('X: ${event.x}');
+    print('Y: ${event.y}');
+    print('Z: ${event.z}');
+});
+
+Magnetometer
+The magnetometer measures the ambient geomagnetic field for all three physical axes (x, y, z) in μT.
+
+motionSensors.magnetometer.listen((MagnetometerEvent event) {
+    print('X: ${event.x}');
+    print('Y: ${event.y}');
+    print('Z: ${event.z}');
+});
+
+Absolute Orientation
+The package also provides access to the absolute orientation of the device in terms of yaw, pitch, and roll.
+
+motionSensors.absoluteOrientation.listen((AbsoluteOrientationEvent event) {
+    print('Yaw: ${event.yaw}');
+    print('Pitch: ${event.pitch}');
+    print('Roll: ${event.roll}');
+});
 ```
 
-## Screenshot
-
-<img src="https://github.com/fettespferd/simple_sensor/raw/master/screenshot.png" width="30%" /># simple_sensor
