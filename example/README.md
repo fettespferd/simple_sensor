@@ -1,4 +1,4 @@
-# motion_sensors_example
+# simple_sensor_example
 
 Demonstrates how to use the motion_sensors plugin.
 

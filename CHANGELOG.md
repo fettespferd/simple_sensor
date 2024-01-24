@@ -1,3 +1,7 @@
+## 0.1.3
+
+* more bug fixes for ios
+
 ## 0.1.2
 
 * bug fixes for ios
