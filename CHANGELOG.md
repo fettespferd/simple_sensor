@@ -1,3 +1,7 @@
+## 0.1.4
+
+* update ReadMe
+
 ## 0.1.3
 
 * more bug fixes for ios

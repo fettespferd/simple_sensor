@@ -11,7 +11,7 @@ file](https://flutter.io/platform-plugins/).
 
 ```yaml
 dependencies:
-  simple_sensor: ^0.1.3
+  simple_sensor: ^0.1.4
 ```
 
 Import to your project.
