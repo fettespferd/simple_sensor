@@ -1,3 +1,7 @@
+## 0.1.2
+
+* bug fixes for ios
+
 ## 0.1.1
 
 * add full ios support
