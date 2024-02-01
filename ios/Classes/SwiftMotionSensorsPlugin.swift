@@ -71,43 +71,6 @@ public class SwiftMotionSensorsPlugin: NSObject, FlutterPlugin {
         }
     }
     
-    public func isSensorAvailable(_ sensorType: Int) -> Bool {
-        let motionManager = CMMotionManager()    // Add these constants to your sensor types
-    case TYPE_QUATERNION:
-    case TYPE_ROTATION_MATRIX:
-
-    // Modify your isSensorAvailable function
-    public func isSensorAvailable(_ sensorType: Int) -> Bool {
-        let motionManager = CMMotionManager()
-        switch sensorType {
-        // ...
-        case TYPE_QUATERNION, TYPE_ROTATION_MATRIX:
-            return motionManager.isDeviceMotionAvailable
-        // ...
-        }
-    }
-
-    // Add these cases to your handle function
-    public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
-        switch call.method {
-        // ...
-        case "getQuaternion":
-            if let motion = motionManager.deviceMotion {
-                result(motion.attitude.quaternion)
-            } else {
-                result(FlutterError(code: "UNAVAILABLE", message: "Quaternion data not available", details: nil))
-            }
-        case "getRotationMatrix":
-            if let motion = motionManager.deviceMotion {
-                let attitude = motion.attitude
-                let rotationMatrix = attitude.rotationMatrix
-                result(rotationMatrix)
-            } else {
-                result(FlutterError(code: "UNAVAILABLE", message: "Rotation matrix data not available", details: nil))
-            }
-        // ...
-        }
-    }
         switch sensorType {
         case TYPE_ACCELEROMETER:
             return motionManager.isAccelerometerAvailable

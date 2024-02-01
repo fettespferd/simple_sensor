@@ -1,3 +1,7 @@
+## 0.1.6
+
+* correct rotation matrix update
+
 ## 0.1.5
 
 * update rotation matrix and quaternion function

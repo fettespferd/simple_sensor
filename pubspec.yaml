@@ -1,6 +1,6 @@
 name: simple_sensor
 description: Flutter plugin for accessing the Android and iOS accelerometer, gyroscope, magnetometer, and orientation sensors.
-version: 0.1.5
+version: 0.1.6
 homepage: https://github.com/fettespferd/simple_sensor
 
 environment:
