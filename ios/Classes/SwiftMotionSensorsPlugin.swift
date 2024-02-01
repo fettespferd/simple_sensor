@@ -71,6 +71,8 @@ public class SwiftMotionSensorsPlugin: NSObject, FlutterPlugin {
         }
     }
     
+    public func isSensorAvailable(_ sensorType: Int) -> Bool {
+        let motionManager = CMMotionManager()
         switch sensorType {
         case TYPE_ACCELEROMETER:
             return motionManager.isAccelerometerAvailable

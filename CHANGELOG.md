@@ -1,3 +1,7 @@
+## 0.1.7
+
+* more adaptions to rotation update
+
 ## 0.1.6
 
 * correct rotation matrix update
